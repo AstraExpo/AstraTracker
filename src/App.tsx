@@ -1,7 +1,7 @@
 import { SubmitEvent, useEffect, useState } from "react";
 import "./App.css";
 import { addTask, deleteTask, getAllTasks, toggleTask } from "./lib/taskStore";
-import { Card, CardHeader, CardTitle, CardContent} from "./components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "./components/ui/card";
 import { Input } from "./components/ui/input";
 import { Button } from "./components/ui/button";
 import { Checkbox } from "./components/ui/checkbox";
@@ -44,8 +44,12 @@ function App() {
     return (
       <main className="h-screen w-full flex items-center justify-center bg-background text-foreground">
         <Button variant="ghost" size="icon" onClick={toggleTheme}>
-  {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-</Button>
+          {theme === "dark" ? (
+            <Sun className="h-4 w-4" />
+          ) : (
+            <Moon className="h-4 w-4" />
+          )}
+        </Button>
         <p>Loading tasks...</p>
       </main>
     );
@@ -54,8 +58,12 @@ function App() {
   return (
     <main className="min-h-screen w-full bg-background text-foreground p-8 flex justify-center">
       <Button variant="ghost" size="icon" onClick={toggleTheme}>
-  {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-</Button>
+        {theme === "dark" ? (
+          <Sun className="h-4 w-4" />
+        ) : (
+          <Moon className="h-4 w-4" />
+        )}
+      </Button>
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-2xl">Astra Tracker</CardTitle>
